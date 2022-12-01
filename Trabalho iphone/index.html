@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno's Iphone Store</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Bruno's Apple Store</a>
+        <div class="menuToggle">
+        </div>
+    </header>
+
+    <ul class="navigation">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#products" onclick="toggleMenu()">Ofertas</a></li>
+        <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+    </ul>
+
+    <section class="banner" id="home">
+        <img src="img/banner.jpg" class="cover">
+        <div class="contentBox">
+            <h2>Loja Produtos Apple</h2>
+            <h4>Qualidade e preco baixo</h4>
+            <a href="#products" class="button">Ofertas</a>
+            <a href="#about" class="button">Sobre</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="title">
+            <h2>Ofertas</h2>
+        </div>
+        <div class="productList">
+            <div class="productBox">
+                <div class="imageBox">
+                    <img src="img/iphone_14_pro_max.jpg" class="productImage">
+                </div>
+                <div class="descriptionBox">
+                    <div>
+                        <span class="productTitle">IPHONE 14 PRO MAX</span><br>
+                        <span class="productPrice">R$ 8.200,00</span><br>
+                        <br>
+                        <b>Armazenamento (64GB):</b> 256 GB<br>
+                        <b>Tamanho:</b> 6.7''<br>
+                        <b>Camera Principal Tripla:</b> 48 megapixels e outras duas com 12 pegapixels<br>
+                        <b>Camera Frontal:</b> 12 megapixels<br>
+                        <b>Data de lancamento:</b> Setembro/2022<br>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="productBox">
+                <div class="imageBox">
+                    <img src="img/iphone_13.jpg" class="productImage">
+                </div>
+                <div class="descriptionBox">
+                    <div>
+                        <span class="productTitle">IPHONE 13</span><br>
+                        <span class="productPrice">R$ 4.555,00</span><br>
+                        <br>
+                        <b>Armazenamento (GB):</b> 128 GB<br>
+                        <b>Tamanho:</b> 6.1''<br>
+                        <b>Camera Principal Dupla:</b> 12  megapixels cada uma<br>
+                        <b>Camera Frontal:</b> 12 megapixels<br>
+                        <b>Data de lancamento:</b> Setembro/2021<br>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="productBox">
+                <div class="imageBox">
+                    <img src="img/ipad_mini.jpg" class="productImage">
+                </div>
+                <div class="descriptionBox">
+                    <div>
+                        <span class="productTitle">IPAD Mini</span><br>
+                        <span class="productPrice">R$ 4.000,00</span><br>
+                        <br>
+                        <b>Armazenamento (64GB):</b> 256 GB<br>
+                        <b>Tamanho:</b> 8.3''<br>
+                        <b>Camera Principal:</b> 12 megapixels<br>
+                        <b>Camera Frontal:</b> 12 megapixels<br>
+                        <b>Data de lancamento:</b> Setembro/2021<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="title">
+            <h2>Sobre</h2>
+        </div>
+        <div class="contentBox">
+            <div class="content">
+                <p>
+                    <b>Curso:</b> Ciencias da Computacao<br>
+                    <b>Disciplina:</b> HTML, CSS e PHP<br>
+                    <b>Professor:</b> Henrique Mota<br>
+                    <b>Aluno:</b> Bruno Soares Ribeiro<br>
+                    <b>Matricula:</b> 202202336084
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            // Fazer header ficar colado (sticky) ao scroll down, e retornar
+            // ao estado inicial quando o scroll estiver na posicao inicial
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            menuToggle.classList.remove('active');
+            navigation.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
